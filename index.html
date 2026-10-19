@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sevennineholdings | Industrial & Electrical Solutions</title>
+  <meta name="description" content="Sevennineholdings provides industrial, electrical and manufacturing product sourcing solutions. Contact our team for enquiries.">
+  <meta name="theme-color" content="#101c30">
+
+  <style>
+    :root {
+      --navy: #101c30;
+      --navy-light: #203b59;
+      --gold: #c8a96b;
+      --white: #ffffff;
+      --light: #f5f7fa;
+      --text: #263449;
+      --muted: #64748b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e8ebf0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .brand span { color: #a7803e; }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: #a7803e; }
+
+    .hero {
+      color: white;
+      padding: 115px 0;
+      background:
+        linear-gradient(90deg, rgba(16,28,48,.96), rgba(16,28,48,.68)),
+        url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.12;
+      margin: 22px 0;
+      max-width: 790px;
+    }
+
+    .hero p {
+      max-width: 660px;
+      color: #e0e7f0;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 24px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: bold;
+      border-radius: 3px;
+      transition: .2s;
+    }
+
+    .btn:hover { background: white; }
+
+    section { padding: 78px 0; }
+
+    .section-label {
+      color: #a7803e;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.25;
+      margin: 12px 0 20px;
+      color: var(--navy);
+    }
+
+    .intro {
+      max-width: 740px;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 340px;
+      border-radius: 5px;
+      background:
+        url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85")
+        center/cover no-repeat;
+    }
+
+    .services { background: var(--light); }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 36px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e6eaf0;
+      padding: 28px;
+      border-radius: 4px;
+    }
+
+    .card-number {
+      color: #a7803e;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin: 12px 0;
+    }
+
+    .card p { color: var(--muted); font-size: 15px; }
+
+    .global {
+      background:
+        linear-gradient(rgba(16,28,48,.88), rgba(16,28,48,.88)),
+        url("https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    .global h2 { color: white; }
+
+    .global p {
+      color: #e0e7f0;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .contact {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 { color: white; }
+
+    .contact p {
+      color: #d9e1ec;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .email {
+      display: inline-block;
+      color: var(--gold);
+      margin-top: 18px;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #0b1422;
+      color: #bdc6d3;
+      padding: 24px 0;
+      font-size: 13px;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 700px) {
+      nav { flex-wrap: wrap; padding: 16px 0; }
+      .brand { font-size: 18px; }
+      .nav-links { gap: 16px; font-size: 12px; }
+      .hero { padding: 78px 0; }
+      .cards, .about-grid { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+      .about-image { min-height: 240px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a class="brand" href="#home">SEVENNINE<span>HOLDINGS</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#global">Our Approach</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Industrial • Electrical • Manufacturing</div>
+
+        <h1>Your Partner for Industrial and Electrical Supply Solutions</h1>
+
+        <p>
+          Connecting business requirements with industrial products,
+          electrical supplies and sourcing solutions through a
+          customer-focused approach.
+        </p>
+
+        <a class="btn" href="#contact">Contact Our Team &rarr;</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <div class="section-label">About Us</div>
+
+          <h2>Building dependable business connections.</h2>
+
+          <p class="intro">
+            Sevennineholdings focuses on industrial, electrical and
+            manufacturing supply requirements. Our approach centres
+            on understanding customer needs, supporting product
+            sourcing and developing reliable business relationships.
+          </p>
+
+          <a class="btn" href="#services">Explore Our Services</a>
+        </div>
+
+        <div class="about-image"
+             role="img"
+             aria-label="Industrial engineering and equipment">
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-label">Our Services</div>
+
+        <h2>Solutions for Your Business Needs</h2>
+
+        <p class="intro">
+          Explore our core areas of focus. Contact us to discuss
+          your particular product requirements and availability.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-number">01 / ELECTRICAL</div>
+            <h3>Electrical Products</h3>
+            <p>
+              Sourcing support for electrical products and
+              related business applications.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02 / INDUSTRIAL</div>
+            <h3>Industrial Supplies</h3>
+            <p>
+              Supply solutions for industrial requirements
+              and operational needs.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03 / MANUFACTURING</div>
+            <h3>Manufacturing Solutions</h3>
+            <p>
+              Product sourcing support for manufacturing
+              and related applications.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="global" id="global">
+      <div class="container">
+        <div class="eyebrow">Our Approach</div>
+
+        <h2>Focused on Your Requirements</h2>
+
+        <p>
+          We aim to simplify the sourcing process through
+          responsive communication, suitable product options
+          and customer-oriented support. Contact our team to
+          discuss sourcing and delivery requirements.
+        </p>
+
+        <a class="btn" href="mailto:sale@sevennineholdings.com">
+          Send an Enquiry &rarr;
+        </a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="eyebrow">Get in Touch</div>
+
+        <h2>Let's Discuss Your Requirements</h2>
+
+        <p>
+          Looking for industrial or electrical products?
+          Contact Sevennineholdings to discuss your business needs.
+        </p>
+
+        <a class="email"
+           href="mailto:sale@sevennineholdings.com">
+          sale@sevennineholdings.com
+        </a>
+
+        <br>
+
+        <a class="btn" href="mailto:sale@sevennineholdings.com">
+          Contact Our Team &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&copy; <span id="year"></span> Sevennineholdings</span>
+      <a href="https://sevennineholdings.com">
+        sevennineholdings.com
+      </a>
+      <span>All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
